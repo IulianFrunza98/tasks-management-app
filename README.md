@@ -10,7 +10,6 @@ Check out the live demo [here](https://your-demo-link.com).
 
 ## Screenshots
 
-![Task List](./src/screenshots/task-list.png")
 ![Task List](./src/screenshots/task-list-2.png)
 ![Stats Page](./src/screenshots/stats-page.png)
 
