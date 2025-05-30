@@ -23,11 +23,11 @@ function TaskList() {
   ];
 
   return (
-    <div className="mt-[80px] sm:mt-0 p-5 max-w-[60rem] w-full mx-auto my-12">
+    <div className="mt-[3rem] sm:mt-0 p-5 max-w-[60rem] w-full mx-auto my-12">
       <TaskForm />
 
-      {/* Responsive filter buttons with horizontal scroll on mobile */}
-      <div className="flex flex-wrap justify-center gap-4 my-6 overflow-x-auto px-2">
+      {/* Responsive filter buttons with vertical stack on small screens */}
+      <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 my-6 px-2">
         {filters.map(({ key, label }) => (
           <button
             aria-pressed={filter === key}

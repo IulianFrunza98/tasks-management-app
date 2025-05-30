@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <>
-      {/* Hamburger button mobile */}
+      {/* Hamburger button mobile - FIXED in top right */}
       <AnimatePresence>
         {!isOpen && (
           <motion.button
@@ -19,9 +19,9 @@ function Navbar() {
             onClick={toggleMenu}
             className="fixed top-4 left-4 p-2 rounded-md bg-blue-800 text-white text-xl z-60 sm:hidden"
             aria-label="Open menu"
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
+            exit={{ opacity: 0, x: 20 }}
             transition={{ duration: 0.25 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -33,7 +33,7 @@ function Navbar() {
       {/* Desktop Sidebar */}
       <motion.aside
         initial={false}
-        animate={{ width: isOpen ? 192 : 64 }} // 12rem = 192px, 4rem = 64px
+        animate={{ width: isOpen ? 192 : 64 }}
         transition={{ type: "spring", stiffness: 200, damping: 30 }}
         className="fixed top-0 left-0 h-screen bg-blue-800 text-white flex-col items-center z-50 hidden sm:flex overflow-hidden shadow-md"
       >

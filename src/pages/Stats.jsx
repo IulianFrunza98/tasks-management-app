@@ -48,39 +48,39 @@ function Stats() {
   const COLORS = ["#22c55e", "#facc15"]; // green, yellow
 
   return (
-    <div className="mt-[80px] sm:mt-12 mb-12 px-4">
-      <h1 className="text-2xl text-center">Stats</h1>
+    <div className="mt-[3.5rem] sm:mt-12 mb-12 px-4">
+      <h1 className="text-2xl sm:text-xl text-center">Stats</h1>
 
       {/* Statistic Cards */}
       <AnimatePresence mode="wait">
-        <motion.ul
+        <motion.div
           key={tasks.length + "-" + completed}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -15 }}
           transition={{ duration: 0.4 }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full text-center py-4"
+          className="flex flex-col sm:grid sm:grid-cols-3 gap-4 py-4"
           aria-label="Task statistics"
         >
           {stats.map(({ key, label, icon, value }) => (
-            <motion.li
+            <motion.div
               key={key}
               layout
-              className="flex flex-col items-center gap-3 bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 p-3 rounded-md shadow-md"
+              className="flex flex-col items-center gap-2 bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100 p-4 rounded-md shadow-md"
             >
               {icon}
-              <dl>
-                <dt className="font-semibold">{label}</dt>
-                <dd>{value}</dd>
+              <dl className="text-center">
+                <dt className="font-semibold text-base sm:text-sm">{label}</dt>
+                <dd className="text-base sm:text-sm">{value}</dd>
               </dl>
-            </motion.li>
+            </motion.div>
           ))}
-        </motion.ul>
+        </motion.div>
       </AnimatePresence>
 
       {/* Donut Chart */}
       <div className="w-full max-w-md mx-auto mt-10 relative">
-        <h2 className="text-center text-lg font-semibold mb-2">
+        <h2 className="text-center text-lg sm:text-base font-semibold mb-2">
           Task Completion Chart
         </h2>
 
