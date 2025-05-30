@@ -33,7 +33,7 @@ function TaskForm() {
       transition={{ duration: 0.5 }}
       onSubmit={handleSubmit}
     >
-      <h1 className="text-2xl text-center font-bold mb-4">Task List</h1>
+      <h1 className="text-2xl text-center font-bold mb-4">Tasks Management</h1>
 
       <div className="flex justify-center items-center gap-2 w-full">
         <label htmlFor="addTask" className="sr-only">
